@@ -75,7 +75,7 @@ public class FacebookPoster {
     }
 
     public void sharePhoto(String string, File sharePath) throws FileNotFoundException{
-    	Request request = Request.newUploadPhotoRequest(Session.getActiveSession(), sharePath, string, new Request.Callback() {
+    	Request request = Request.newUploadPhotoRequest(Session.getActiveSession(), sharePath, new Request.Callback() {
             @Override
             public void onCompleted(Response response) {
             	activity.progressbar.setVisibility(View.INVISIBLE);
